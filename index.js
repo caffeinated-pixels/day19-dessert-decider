@@ -1,5 +1,4 @@
 const btn = document.getElementById('btn')
-const foodHolder = document.getElementById('foodHolder')
 const largeDessertDisplay = document.getElementById('large-dessert-img')
 const prevDesserts = document.getElementById('prev-desserts')
 btn.addEventListener('click', getDessert)
@@ -48,7 +47,7 @@ function displayPrevDesserts() {
 }
 
 function displayPrevImg(e) {
-  console.log(e.target.src)
+  largeDessertDisplay.src = e.target.src
 }
 
 /* Task:
