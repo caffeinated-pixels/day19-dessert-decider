@@ -7,8 +7,9 @@ const apiUrl = 'https://foodish-api.herokuapp.com/api/images/dessert'
 const dessertsArr = []
 
 async function getDessert() {
-  // api hosts 36 desserts
-  if (dessertsArr.length < 35) {
+  // api hosts 36 desserts but I've limited to fetching 10 to reduce request spam
+  console.log()
+  if (dessertsArr.length < 10) {
     try {
       const response = await fetch(apiUrl)
       const data = await response.json()
@@ -16,6 +17,8 @@ async function getDessert() {
     } catch (error) {
       console.log(error.message)
     }
+  } else {
+    btn.textContent = "That's enough desserts! 😉"
   }
 }
 
