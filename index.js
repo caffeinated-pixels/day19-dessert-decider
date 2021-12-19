@@ -28,6 +28,7 @@ function checkIfRepeat(img) {
     dessertsArr.push(img)
     displayPrevDesserts(img)
   } else {
+    // if dessert already in the array, call API again
     getDessert()
   }
 }
