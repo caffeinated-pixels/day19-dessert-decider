@@ -46,6 +46,7 @@ function displayPrevDesserts() {
   })
 
   prevDesserts.appendChild(fragment)
+  prevDesserts.scrollLeft = prevDesserts.scrollWidth
 }
 
 function displayPrevImg(e) {

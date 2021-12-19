@@ -58,11 +58,11 @@ button:hover {
 
 .prev-desserts {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
+  overflow-y: auto;
+  width: 100%;
   max-width: 500px;
   margin-top: 1em;
+  padding-bottom: 1em;
 
   gap: 0.5em;
 }
