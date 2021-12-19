@@ -17,7 +17,7 @@ async function getDessert() {
 function displayDessert(imgUrl) {
   const imgEl = document.createElement('img')
   imgEl.src = imgUrl
-
+  foodHolder.textContent = ''
   foodHolder.appendChild(imgEl)
 }
 
