@@ -29,12 +29,15 @@ function displayDessert(imgUrl) {
 function displayPrevDesserts() {
   console.log(dessertsArr)
   prevDesserts.textContent = ''
+  const fragment = document.createDocumentFragment()
   dessertsArr.forEach((dessert) => {
     const imgEl = document.createElement('img')
     imgEl.src = dessert
     imgEl.className = 'prev-dessert-img'
-    prevDesserts.appendChild(imgEl)
+    fragment.appendChild(imgEl)
   })
+
+  prevDesserts.appendChild(fragment)
 }
 
 /* Task:
