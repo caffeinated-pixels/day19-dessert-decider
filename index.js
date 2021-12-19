@@ -1,18 +1,24 @@
 const btn = document.getElementById('btn')
+const foodHolder = document.getElementById('foodHolder')
 btn.addEventListener('click', getDessert)
 
 const apiUrl = 'https://foodish-api.herokuapp.com/api/images/dessert'
 
 async function getDessert() {
-  console.log('click')
-
   try {
     const response = await fetch(apiUrl)
     const data = await response.json()
-    console.log(data)
+    displayDessert(data.image)
   } catch (error) {
     console.log(error.message)
   }
+}
+
+function displayDessert(imgUrl) {
+  const imgEl = document.createElement('img')
+  imgEl.src = imgUrl
+
+  foodHolder.appendChild(imgEl)
 }
 
 /* Task:
