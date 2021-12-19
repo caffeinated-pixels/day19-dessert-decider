@@ -8,7 +8,6 @@ const dessertsArr = []
 
 async function getDessert() {
   // api hosts 36 desserts but I've limited to fetching 10 to reduce request spam
-  console.log()
   if (dessertsArr.length < 10) {
     try {
       const response = await fetch(apiUrl)
