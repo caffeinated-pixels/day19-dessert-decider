@@ -23,7 +23,7 @@ function checkIfRepeat(img) {
   if (dessertsArr.indexOf(img) === -1) {
     displayDessert(img)
     dessertsArr.push(img)
-    displayPrevDesserts()
+    displayPrevDesserts(img)
   } else {
     getDessert()
   }
@@ -34,18 +34,13 @@ function displayDessert(imgUrl) {
   largeDessertDisplay.src = imgUrl
 }
 
-function displayPrevDesserts() {
-  prevDesserts.textContent = ''
-  const fragment = document.createDocumentFragment()
-  dessertsArr.forEach((dessert) => {
-    const imgEl = document.createElement('img')
-    imgEl.src = dessert
-    imgEl.className = 'prev-dessert-img'
-    imgEl.addEventListener('click', displayPrevImg)
-    fragment.appendChild(imgEl)
-  })
+function displayPrevDesserts(imgUrl) {
+  const imgEl = document.createElement('img')
+  imgEl.src = imgUrl
+  imgEl.className = 'prev-dessert-img'
+  imgEl.addEventListener('click', displayPrevImg)
 
-  prevDesserts.appendChild(fragment)
+  prevDesserts.appendChild(imgEl)
   prevDesserts.scrollLeft = prevDesserts.scrollWidth
 }
 
