@@ -70,4 +70,9 @@ button:hover {
 .prev-dessert-img {
   max-width: 100px;
   max-height: 75px;
+  cursor: pointer;
+}
+
+.prev-dessert-img:hover {
+  filter: brightness(0.5);
 }
