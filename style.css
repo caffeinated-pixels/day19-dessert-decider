@@ -67,5 +67,6 @@ button:hover {
 }
 
 .prev-dessert-img {
-  width: 100px;
+  max-width: 100px;
+  max-height: 75px;
 }
