@@ -7,12 +7,15 @@ const apiUrl = 'https://foodish-api.herokuapp.com/api/images/dessert'
 const dessertsArr = []
 
 async function getDessert() {
-  try {
-    const response = await fetch(apiUrl)
-    const data = await response.json()
-    checkIfRepeat(data.image)
-  } catch (error) {
-    console.log(error.message)
+  // api hosts 36 desserts
+  if (dessertsArr.length < 35) {
+    try {
+      const response = await fetch(apiUrl)
+      const data = await response.json()
+      checkIfRepeat(data.image)
+    } catch (error) {
+      console.log(error.message)
+    }
   }
 }
 
@@ -27,7 +30,6 @@ function checkIfRepeat(img) {
 }
 
 function displayDessert(imgUrl) {
-  console.log(largeDessertDisplay)
   largeDessertDisplay.style.visibility = 'visible'
   largeDessertDisplay.src = imgUrl
 }
