@@ -39,6 +39,7 @@ img {
 }
 
 button {
+  cursor: pointer;
   margin: 2em;
   padding: 1em 2em;
   border: none;
@@ -52,8 +53,12 @@ button {
 }
 
 button:hover {
-  cursor: pointer;
   transform: scale(1.03);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  transform: none;
 }
 
 .prev-desserts {

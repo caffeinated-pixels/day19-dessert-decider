@@ -18,6 +18,7 @@ async function getDessert() {
     }
   } else {
     btn.textContent = "That's enough desserts! 😉"
+    btn.disabled = true
   }
 }
 
