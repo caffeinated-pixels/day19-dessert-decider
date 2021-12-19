@@ -18,14 +18,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   color: var(--snow);
   background-color: var(--dark-green);
 }
 
 img {
+  max-width: 100%;
   object-fit: cover;
+}
+
+.large-dessert-img {
   height: 300px;
   width: 340px;
   border-radius: 10px;
@@ -49,4 +53,19 @@ button {
 button:hover {
   cursor: pointer;
   transform: scale(1.03);
+}
+
+.prev-desserts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  max-width: 500px;
+  margin-top: 1em;
+
+  gap: 0.5em;
+}
+
+.prev-dessert-img {
+  max-width: 100px;
 }
